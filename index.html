@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+</head>
+<body>
+    <header>
+        
+            <nav>
+                <div class="logo">MD.</div>
+                <div class="menu-toggle" id="mobile-menu">
+                    <i class="fas fa-bars"></i>
+                </div>
+                
+                    <ul class="nav-links">
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#projects">Projects</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+            </nav>
+        
+        <a href="#home" class="scrollTop" id="scrollTop">↑</a>
+
+    </header>
+
+<section id="home" >
+   
+        <div class="entrance_content">
+            <h1>Esalamu alaykom  </h1>
+            <h1>I'm Maroua Daheur.</h1>
+            <p>A passionate second year cs student . </p>
+            <a href="#projects" class="btn">View My Work</a>
+        </div>
+    
+</section>
+
+<section id="about" >
+    <div class="container">
+        <h2 class="section-title">About Me</h2>
+        <div class="about-content">
+            <div class="about-img">
+                <img src="kittyy.jpg" alt="Profile Image" style="object-fit: cover;">
+            </div>
+            <div class="about-text">
+                <p>A motivated cs student who wants to learn every possible coding language <br> currently trying to get real deep in html and css also trying to learn js to enter web devoleping </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="projects">
+    <div class="container">
+        <h2 class="section-title">My Projects</h2>
+        <div class="projects-grid">
+            
+            <div class="project-card">
+                <div class="project-info">
+                    <h3>Project One: Calculator</h3>
+                    <h5>This is a simple,responsive calculator with basic operations. </h5>
+                    <p>- Languages used:</p>
+                    <ul>
+                        <li>HTML</li>
+                        <li>CSS</li>
+                    </ul>
+                    <a href="https://github.com/maroua18-dhr/calculator" class="btn">View Project</a>
+                </div>
+            </div>
+            
+            <div class="project-card">
+                <div class="project-info">
+                    <h3>Project Two</h3>
+                    <h5> this project is still in the making, <br> my idea is that it should contain recipes of all kind .
+                    </h5>
+                    <p>- Languages used:</p>
+                        <ul>
+                        <li>HTML</li>
+                        <li>CSS</li>
+                        <li>JavaScript</li>
+                        </ul>
+                    <a href="https://github.com/maroua18-dhr/recipes" class="btn">View Project</a>
+                </div>
+            </div>
+            
+            <div class="project-card">
+                <div class="project-info">
+                    <h3>Project Three</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in dui mauris.</p>
+                    <a href="#" class="btn">View Project</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="contact">
+    <div class="container">
+        <h2 class="section-title">Get In Touch</h2>
+        <div class="contact-form">
+            <form>
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" class="form-control" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" class="form-control" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" class="form-control" required></textarea>
+                </div>
+                <button type="submit" class="btn">Send Message</button>
+            </form>
+        </div>
+    </div>
+</section>
+
+
+<footer>
+    <div class="container">
+        <p>&copy; 2025 maroua's portfolio.</p>
+        <ul class="social-links">
+            <li><a href="https://github.com/maroua18-dhr"><i class="fab fa-github"></i></a></li>
+            <li><a href="https://facebook.com/maroua.daheur"><i class="fab fa-facebook"></i></a></li>
+    </div>
+</footer>
+
+<script >
+    const menuToggle = document.getElementById('mobile-menu');
+    const navLinks = document.querySelector('.nav-links');
+
+    menuToggle.addEventListener('click', () => {
+        navLinks.classList.toggle('active');
+
+        const icon = menuToggle.querySelector("i");
+        icon.classList.toggle("fa-bars");
+        icon.classList.toggle("fa-times");
+    });
+    const scrollTop = document.getElementById("scrollTop");
+    window.onscroll = function() {
+        if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+            scrollTop.classList.add("show");
+        } else {
+            scrollTop.classList.remove("show");
+        }
+    };
+</script>
+</body>
+</html>
