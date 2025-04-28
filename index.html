@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio</title>
+    <title>Maroua's Portfolio</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
@@ -13,7 +13,7 @@
         
             <nav>
                 <div class="logo">MD.</div>
-                <div class="menu-toggle" id="mobile-menu">
+                <div class="menu" id="mobile-menu">
                     <i class="fas fa-bars"></i>
                 </div>
                 
@@ -21,7 +21,6 @@
                         <li><a href="#home">Home</a></li>
                         <li><a href="#about">About</a></li>
                         <li><a href="#projects">Projects</a></li>
-                        <li><a href="#contact">Contact</a></li>
                     </ul>
             </nav>
         
@@ -34,12 +33,19 @@
         <div class="entrance_content">
                 <img  class="about-img" src="kittyy.jpg" alt="Profile Image" style="object-fit: cover;">
             <div class="entrance_text">
-                <h1 >Esalamu alaykom  </h1>
-                <h1 >I'm Maroua Daheur.</h1>
-                <p >A passionate second year cs student . </p>
-                <a href="#projects" class="btn">View My Work</a>
+                <h1 class="aniText" >Esalamu alaykom  </h1>
+                <h1 class="aniText">I'm Maroua Daheur.</h1>
+                <p >Welcome to my portfolio website! </p>
+                <a href="#projects" class="btn" aria-label="View My Work">View My Work</a>
+
+                <h4 class="aniText">Contact me on social media below:</h4>
+                <ul class="social-links">
+                    <li><a href="https://github.com/maroua18-dhr" aria-label="GitHub"><i class="fab fa-github"></i></a></li>
+                    <li><a href="https://facebook.com/maroua.daheur" aria-label="Facebook"><i class="fab fa-facebook"></i></a></li>
+                </ul>
             </div>
         </div>
+        
     
 </section>
 
@@ -47,15 +53,14 @@
     <div class="container">
        
         <div class="about-content">
-            <div class="about-text"><h3>About Me :</h3> 
-                <p>Heyy , I'm maroua , A passionate 2nd year cs student from Algeria with growing interest in web development </p>
-            </div>
+                <div class="about-text"><h3>About Me :</h3> 
+                    <p>Heyy , I'm maroua , A passionate 2nd year cs student from Algeria with growing interest in web development <br> When I'm not studying, I’m either reading books or watching movies, that's actually what made me want to build a website about them!</p>
+                </div>
 
                 <div class="goals">
                     <h3>My goals :</h3>
                     <p> Currently focused on mastering HTML ,CSS and Java Script</p>
                 </div>
-            
         </div>
 
 
@@ -98,59 +103,9 @@
         </div>
     </div>
 </section>
-
-<section id="contact">
-    <div class="container">
-        <h2 class="section-title">Get In Touch</h2>
-        <div class="contact-form">
-            <form action="#" method="POST">
-                <div class="form-group">
-                    <label for="name">Name</label>
-                    <input type="text" id="name" class="form-control" required>
-                </div>
-                <div class="form-group">
-                    <label for="email">Email</label>
-                    <input type="email" id="email" class="form-control" required>
-                </div>
-                <div class="form-group">
-                    <label for="message">Message</label>
-                    <textarea id="message" class="form-control" required></textarea>
-                </div>
-                <button type="submit" class="btn">Send Message</button>
-            </form>
-        </div>
-    </div>
-</section>
-
-
-<footer>
-    <div class="container">
-        <p>Contact me on social media below:</p>
-        <ul class="social-links">
-            <li><a href="https://github.com/maroua18-dhr"><i class="fab fa-github"></i></a></li>
-            <li><a href="https://facebook.com/maroua.daheur"><i class="fab fa-facebook"></i></a></li>
-    </div>
+<footer> 
+    <div class="footer"> <p>Made by Daheur Maroua.</p></div>
 </footer>
-
-<script >
-    const menuToggle = document.getElementById('mobile-menu');
-    const navLinks = document.querySelector('.nav-links');
-
-    menuToggle.addEventListener('click', () => {
-        navLinks.classList.toggle('active');
-
-        const icon = menuToggle.querySelector("i");
-        icon.classList.toggle("fa-bars");
-        icon.classList.toggle("fa-times");
-    });
-    const scrollTop = document.getElementById("scrollTop");
-    window.onscroll = function() {
-        if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
-            scrollTop.classList.add("show");
-        } else {
-            scrollTop.classList.remove("show");
-        }
-    };
-</script>
+<script src="js.js"> </script>
 </body>
 </html>
