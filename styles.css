@@ -399,7 +399,7 @@ h4{
     }
 }
 /* ytbdl f small screens  */
-@media (max-width: 768px) {
+@media (max-width: 640px) {
     footer p{
         font-size: 16px;
         font-weight: 400;
