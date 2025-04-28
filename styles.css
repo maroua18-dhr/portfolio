@@ -2,24 +2,52 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    scroll-behavior: smooth;/* makes the page scroll smoothly when u click one of the links */
 }
 
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    line-height: 1.6;
+    line-height: 1.6; /* adds space between lines to make it easier to read*/
     color: #333;
     background-color: #ffffff;
     font-style: italic; 
 }
 
+header {
+    background: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    z-index: 1000;/* header always on top*/
+    width: 100%;
+    position: fixed;/* tg3d at the top when scrolling*/ 
+}
+
+footer{
+    background-color: #a18cd1;
+    color: white;
+    text-align: center;
+    padding: 2px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+footer p{
+    font-size: 18px;
+    margin-bottom: 10px;
+    font-weight: 400;
+}
+.footer{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
 a {
-    text-decoration: none;
+    text-decoration: none;/*tgl3 underline men ga3 links*/
 }
 
 section {
-    padding: 80px 0;
+    padding: 80px 0; /* 80px top bottom , 0 left right*/
 }
-
 
 h1, h2, h3 {
     margin-bottom: 20px;
@@ -34,29 +62,20 @@ p {
 }
 
 .btn {
-    display: inline-block;
+    display: inline-block;/*  */
     background: #312c4c86;
     color: #312c4c;
     padding: 12px 25px;
-    border-radius: 30px;
-    transition: all 0.3s ease;
-    cursor: pointer;
+    border-radius: 30px;/* makes it rounded */
+    transition: all 0.3s ease; /* */
+    cursor: pointer;/*hadik lyed ta3 la souris trodha pointer*/
     border: 2px solid #312c4c;
-    font-weight: 600;
+    font-weight: 630;/* text yweli bold */
 }
 
 .btn:hover {
     background: rgba(49, 44, 76, 0.343);
-    transform: translateY(-2px);
-}
-
-
-header {
-    background: rgba(255, 255, 255, 0.9);
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-    z-index: 1000;
-    width: 100%;
-    position: fixed; 
+    transform: translateY(-2px);/* it makes the button moves up chwiya */
 }
 
 .logo {
@@ -66,16 +85,16 @@ header {
 }
 
 nav {
-    display: flex;
-    justify-content: space-between;
+    display: flex;/* tstf kolchi li f nav bar in a line  */
+    justify-content: space-between; /* dir space between logo w menu */
     align-items: center;
     position: relative;
     padding: 20px 20px;
 }
 
 .nav-links {
-    display: flex;
-    list-style: none;
+    display: flex;/* tkhli nav links yjo 7da ba3d horizontally */
+    list-style: none; /* tgl3 dok les point li ykono fl 'ul'  */
 }
 
 .nav-links a {
@@ -85,16 +104,16 @@ nav {
 }
 
 .nav-links a:hover {
-    color: rgb(58, 56, 56);
+    color: rgb(58, 56, 56);/*when hovering the color becomes dark gray*/
 }
 
 
 #home {
-    height: 100vh;
-    display: flex;
+    height: 120vh;
+    display: flex;/* centered vertically*/
     align-items: center;
     background: rgba(146, 140, 178, 0.316);
-    padding-top: 100px 20px 20px;
+    padding-top: 100px 20px 20px 20px;
 }
 
 
@@ -144,11 +163,12 @@ nav {
 .entrance_content img {
     width: 200px;
     height: 200px;
-    border-radius: 50%;
+    border-radius: 50%; /* trodha circle shape*/
     object-fit: cover;
     filter: grayscale(50%);
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
     flex-shrink: 0;
+    margin-top: 40px;
 }
 
 #about {
@@ -162,7 +182,7 @@ nav {
     flex-direction: row;
     justify-content: center;
     gap: 20px;
-    flex-wrap: wrap;
+    flex-wrap: wrap; 
 }
 
 .about-img {
@@ -179,7 +199,7 @@ nav {
 }
 
 .about-text {
-    flex: 1;
+    flex: auto;
     background-color: rgba(227, 223, 241, 0.5);
     border-left: 4px solid #8e2de2;
     padding: 20px;
@@ -198,7 +218,7 @@ nav {
     display: inline-block;
 }
 
-.about-text h3:after{
+.about-text h3:after{ /* adds an underline under about titles*/
     content: '';
     position: absolute;
     bottom: -5px;
@@ -246,7 +266,7 @@ nav {
 
 .project-card {
     background: white;
-    border-radius: 10px;
+    border-radius: 20px;
     overflow: hidden;
     box-shadow: 0 5px 15px rgba(0,0,0,0.1);
     transition: transform 0.3s;
@@ -260,60 +280,14 @@ nav {
     padding: 20px;
 }
 
-
-#contact {
-    background: white;
-    background-color: rgba(227, 223, 241, 0.5);
-    border-left: 4px solid #8e2de2;
-    padding: 20px;
-    border-radius: 0 8px 8px 0;
-    margin: 25px;
-    position: relative;
-    overflow: hidden;
-    transition: all 0.3 ease;
-}
-
-.contact-form {
-    max-width: 600px;
-    margin: 0 auto;
-}
-
-.form-group {
-    margin-bottom: 20px;
-    padding: 10px 40px;
-}
-
-.form-group label {
-    display: block;
-    margin-bottom: 8px;
-    font-weight: 700;
-    color: #5e5c7a;
-}
-
-.form-control {
-    width: 100%;
-    padding: 12px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    font-family: inherit;
-}
-
-textarea.form-control {
-    min-height: 150px;
-}
-
-
-footer {
-    background: rgba(49, 44, 76, 0.29);
-    text-align: center;
-    padding: 20px;
-    font-size: large;
-    font-weight: bold;
+h4{
+    margin-top: 20px;
+    color: #312c4c;
 }
 
 .social-links {
     display: flex;
-    justify-content: center;
+    justify-content: left;
     list-style: none;
     margin: 20px 0;
 }
@@ -332,7 +306,7 @@ footer {
 }
 
 
-.menu-toggle {
+.menu {
     display: none;
     font-size: 24px;
     cursor: pointer;
@@ -349,7 +323,7 @@ footer {
     color: white;
     border-radius: 50%;
     padding: 10px 25px;
-    display: none;
+    display: none;/* l button mrhich kayna at first (hidden)*/
     font-size: 26px;
 }
 
@@ -358,10 +332,11 @@ footer {
 }
 
 .scrollTop.show {
-    display: block;
+    display: block;/* l button tban min .show class is added*/
 }
 
 .goals{
+    flex: auto;
     background-color: rgba(227, 223, 241, 0.5);
     border-left: 4px solid #8e2de2;
     padding: 20px;
@@ -395,7 +370,24 @@ footer {
     margin-bottom: 0;
 }
 
+.aniText{
+    animation: slideIn 1s ease-out forwards;
 
+}
+/* animation for lketba bch thwd mlfog l ta7t */
+@keyframes slideIn{
+    0% {
+        opacity: 0;
+        transform: translateY(-100%);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+/* animation tzid glow f tswira */
 @keyframes glow {
     from {
         box-shadow: 0 0 10px 2px #a18cd1;
@@ -404,22 +396,29 @@ footer {
         box-shadow: 0 0 30px 10px #a18cd1;
     }
 }
-
+/* ytbdl f small screens  */
 @media (max-width: 768px) {
+    footer p{
+        font-size: 16px;
+        font-weight: 400;
+    }
     .entrance_content{
         flex-direction: column;
         text-align: center;
         padding: 30px;
         gap: 30px;
     }
+    .entrance_content img {
+        width: 140px;
+        height: auto;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        
+    }
     .entrance_text{
         text-align: center;
     }
-    .entrance_contentimg{
-        width: 200px;
-        height: 200px;
-        order: -1;
-    }
+    
     .btn{
         margin: 0 auto;
     }
@@ -429,7 +428,7 @@ footer {
         font-size: 28px;
     }
 
-    .menu-toggle {
+    .menu {
         display: block;
     }
 
@@ -470,4 +469,12 @@ footer {
     .nav-links a:hover {
         color: #5e5c7a;
     }
+    #home {
+        height: 140vh;
+        display: flex;
+        align-items: center;
+        background: rgba(146, 140, 178, 0.316);
+        padding-top: 100px 20px 20px 20px;
+    }
+    
 }
