@@ -275,7 +275,9 @@ nav {
 .project-card:hover {
     transform: translateY(-10px);
 }
-
+.list{
+    list-style: none;
+}
 .project-info {
     padding: 20px;
 }
