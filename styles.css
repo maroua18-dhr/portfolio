@@ -65,7 +65,7 @@ p {
     display: inline-block;/*  */
     background: #312c4c86;
     color: #312c4c;
-    padding: 12px 25px;
+    padding: 10px 21px;
     border-radius: 30px;/* makes it rounded */
     transition: all 0.3s ease; /* */
     cursor: pointer;/*hadik lyed ta3 la souris trodha pointer*/
@@ -146,6 +146,7 @@ nav {
     border-radius: 15px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
     gap: 40px;
+    animation: glow 2s infinite alternate;
 }
 
 .entrance_content h1 {
@@ -271,13 +272,13 @@ nav {
     box-shadow: 0 5px 15px rgba(0,0,0,0.1);
     transition: transform 0.3s;
 }
-
-.project-card:hover {
-    transform: translateY(-10px);
-}
 .list{
     list-style: none;
 }
+.project-card:hover {
+    transform: translateY(-10px);
+}
+
 .project-info {
     padding: 20px;
 }
@@ -327,6 +328,7 @@ h4{
     padding: 10px 25px;
     display: none;/* l button mrhich kayna at first (hidden)*/
     font-size: 26px;
+    font-style: none;
 }
 
 .scrollTop:hover {
@@ -419,12 +421,9 @@ h4{
     }
     .entrance_text{
         text-align: center;
-        font-size: medium;
+        font-size: 300;
     }
     
-    .btn{
-        margin: 0 auto;
-    }
 
     .logo {
         text-align: left; 
@@ -479,5 +478,7 @@ h4{
         background: rgba(146, 140, 178, 0.316);
         padding-top: 100px 20px 20px 20px;
     }
-    
+    .scrollTop {
+        font-style: none;
+    }
 }
