@@ -1,4 +1,4 @@
-//
+
 const menu = document.getElementById('mobile-menu'); //njibo lelement li ID t3eh 'mobile-menu' then save it in 'menu'
 const navLinks = document.querySelector('.nav-links'); //njibo element class ='nav-links' (home ,about,projects ) then save it in navLinks
 
@@ -14,7 +14,7 @@ const navLinks = document.querySelector('.nav-links'); //njibo element class ='n
 
     const scrollTop = document.getElementById("scrollTop"); //t7ws 3la element li id ='scrollTop' (the up arrow)then save it in 'scrollTop
     window.onscroll = function() { //when we scroll up or down the page ykhdm lcode below
-        if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) { //lwla scroll amount for safari w zawja ta3 chrome/firefox/edge ,has the user scrolled down more than 300px?
+        if ( document.documentElement.scrollTop > 300) { //scroll amount for chrome/firefox/edge ,has the user scrolled down more than 300px?
             scrollTop.classList.add("show");// if the condition is true ==> tzid class 'show' f scrollTop button then make it visible 
         } else {
             scrollTop.classList.remove("show");//the button disapears
